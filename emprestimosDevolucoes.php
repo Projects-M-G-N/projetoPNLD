@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Livros Disponíveis</title>
+  <title>Emprestimos + Devoluções</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -85,7 +85,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" href="add_livro.php">ADICIONAR LIVRO</a>
+                    <a class="nav-link" href="addEmprestimo.php">Adicionar Emprestimo</a>
                   </li>
 
                 </ul>
@@ -98,12 +98,12 @@
     <!-- end header section -->
   </div>
 
-  <!-- Livros section -->
+  <!-- Emprestimos section -->
   <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
-          <span>Livros</span>
+          <span>Emprestimos</span>
         </h2>
       </div>
     </div>
@@ -123,11 +123,11 @@
           if (isset($_GET['titulo']) && !empty($_GET['titulo'])) {
             $titulo = $_GET['titulo'];
 
-            // Consulta SQL para buscar os livros com o título informado
-            $sql = "SELECT * FROM livro WHERE situacao = 'ativo' AND qtde_disponivel > 0 AND titulo LIKE '%$titulo%'";
+            // Consulta SQL para buscar os Emprestimos com o título informado
+            $sql = "SELECT emprestimo.*, livro.*, aluno.* FROM emprestimo, livro, aluno, devolucao WHERE emprestimo.codigo_livro=livro.codigo AND emprestimo.matricula_aluno=aluno.matricula AND emprestimo.codigo_emprestimo!=devolucao.codigo_emprestimo AND livro.titulo LIKE '%$titulo%'";
           } else {
-            // Se nenhum termo de pesquisa foi enviado, listar todos os livros disponíveis
-            $sql = "SELECT * FROM livro WHERE situacao = 'ativo' AND qtde_disponivel > 0";
+            // Se nenhum termo de pesquisa foi enviado, listar todos os Emprestimos disponíveis
+            $sql = "SELECT emprestimo.*, livro.*, aluno.* FROM emprestimo, livro, aluno, devolucao WHERE emprestimo.codigo_livro=livro.codigo AND emprestimo.matricula_aluno=aluno.matricula AND emprestimo.codigo_emprestimo!=devolucao.codigo_emprestimo";
           }
 
           $result = $conn->query($sql);
@@ -142,20 +142,21 @@
               echo "<div class='box'>";
               echo "<div class='client_info'>";
               echo "<div class='client_name'>";
-              echo "<h5>" . $row["isbn"] . "</h5>";
-              echo "<h6>" . $row["titulo"] . "</h6>";
+              echo "<h5>" . $row["nome"] . "</h5>";
+              echo "<h6>" . $row["titulo"] . " -- " . $row["isbn"] . "</h6>";
               echo "</div>";
               echo "</div>";
-              echo "<p>" . $row["autor"] . "</p>";
+              echo "<p>" . $row["dataEmprestimo"] . " -- " . $row["dataDevolucao"] . "</p>";
               echo "</div>";
+              echo "<a href='devolverLivro.php?id=" . $row["codigo_emprestimo"] . "'>Devolver</a>";
               echo "</div>";
               $count++;
             }
           } else {
-            // Se não houver livros disponíveis, exibe uma mensagem
+            // Se não houver Emprestimos disponíveis, exibe uma mensagem
             echo "<div class='carousel-item active'>";
             echo "<div class='box'>";
-            echo "<p>Nenhum livro disponível no momento.</p>";
+            echo "<p>Nenhum livro emprestado no momento.</p>";
             echo "</div>";
             echo "</div>";
           }

@@ -48,7 +48,8 @@ CREATE TABLE livro (
    qtde_disponivel INT
 );
 
-CREATE TABLE exemplar(
+/* CREATE TABLE exemplar(
+   codigo_tombo BIGINT NOT NULL,
    codigo_tombo BIGINT NOT NULL,
    codigo_livro INTEGER NOT NULL,
    data_aquisicao DATE,
@@ -59,17 +60,16 @@ CREATE TABLE exemplar(
    PRIMARY KEY(codigo_tombo, codigo_livro),
    FOREIGN KEY(codigo_livro) REFERENCES livro (codigo),
    FOREIGN KEY(status) REFERENCES status_exemplar (codigo)
-);
+); */
 
 CREATE TABLE emprestimo (
    codigo_emprestimo INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   codigo_tombo BIGINT NOT NULL,
    codigo_livro INTEGER NOT NULL,
    dataEmprestimo DATE NOT NULL,
    dataDevolucao DATE NOT NULL,
    matricula_aluno BIGINT NOT NULL,
    adm_responsavel BIGINT NOT NULL,
-   FOREIGN KEY (codigo_tombo,codigo_livro) REFERENCES exemplar (codigo_tombo,codigo_livro),
+   FOREIGN KEY (codigo_livro) REFERENCES livro (codigo),
    FOREIGN KEY (matricula_aluno) REFERENCES aluno (matricula),
    FOREIGN KEY (adm_responsavel) REFERENCES administrador (matricula)
 );
@@ -80,5 +80,7 @@ CREATE TABLE devolucao (
     dataDevolucao DATE,
     FOREIGN KEY (codigo_emprestimo) REFERENCES emprestimo (codigo_emprestimo)
 );
+
+INSERT INTO administrador VALUES ("1234567890", "Ronaldo", "Diretor", "1234567890");
 
 select * from administrador;

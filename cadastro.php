@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql_inserir) === TRUE) {
             // Armazena o nome do administrador em uma variável de sessão
             $_SESSION['nome'] = $nome;
+            $_SESSION['matricula'] = $matricula;
 
             // Redireciona para a tela de login
             header("Location: login.php");

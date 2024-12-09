@@ -73,7 +73,7 @@ session_start();
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" >
+            <a class="navbar-brand">
               <img src="images/White and navy simple book store logo.png" alt="">
             </a>
 
@@ -88,30 +88,30 @@ session_start();
                   <li class="nav-item active">
                     <a class="nav-link" href="funcoes.php">HOME<span class="sr-only">(current)</span></a>
                   </li>
-                  
+
                   <li class="nav-item">
-                  
+
                   <li class="nav-item">
-                    
-                 
-                  
+
+
+
                 </ul>
               </div>
               <div class="quote_btn-container">
-                
+
                 <a href="index.html">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
                     Sair
                   </span>
                   <?php
-        // Verifica se o nome do administrador está definido na sessão
-        if (isset($_SESSION['nome'])) {
-          echo "<p>Bem-vindo(a), " . $_SESSION['nome'] . "</p>";
-        } else {
-          echo "<p>Bem-vindo(a), Administrador</p>"; // Mensagem padrão caso o nome do administrador não esteja definido na sessão
-        }
-    ?>
+                  // Verifica se o nome do administrador está definido na sessão
+                  if (isset($_SESSION['nome'])) {
+                    echo "<p>Bem-vindo(a), " . $_SESSION['nome'] . "</p>";
+                  } else {
+                    echo "<p>Bem-vindo(a), Administrador</p>"; // Mensagem padrão caso o nome do administrador não esteja definido na sessão
+                  }
+                  ?>
                 </a>
               </div>
             </div>
@@ -133,9 +133,9 @@ session_start();
                 <div class="col-md-6">
                   <div class="detail-box">
                     <div class="">
-                     
 
-                     
+
+
                     </div>
                     <h1>
                       sistema <br>
@@ -155,91 +155,91 @@ session_start();
                 </div>
               </div>
             </div>
-         
-
-  <!-- end about section -->
 
 
- <!-- treatment section -->
+            <!-- end about section -->
 
- <section class="treatment_section layout_padding">
-  <div class="side_img">
-    <img src="images/treatment-side-img.jpg" alt="">
-  </div>
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2>
-   <span></span>
-      </h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-3">
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/addaluno.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h4>
-              Aluno
-            </h4>
-            <a href="aluno.php">
-              Acessar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/addturma.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h4>
-              Turma
-            </h4>
-            <a href="turmas.php">
-              Acessar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/addlivros.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h4>
-              Livro
-            </h4>
-            <a href="livros.php">
-              Acessar
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/addemp.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h4>
-              Empréstimos + 
-              Devoluções
-            </h4>
-            <a href="....">
-              Acessar
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- end treatment section -->
-<!-- contact section -->
+            <!-- treatment section -->
+
+            <section class="treatment_section layout_padding">
+              <div class="side_img">
+                <img src="images/treatment-side-img.jpg" alt="">
+              </div>
+              <div class="container">
+                <div class="heading_container heading_center">
+                  <h2>
+                    <span></span>
+                  </h2>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-lg-3">
+                    <div class="box ">
+                      <div class="img-box">
+                        <img src="images/addaluno.png" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Aluno
+                        </h4>
+                        <a href="aluno.php">
+                          Acessar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="box ">
+                      <div class="img-box">
+                        <img src="images/addturma.png" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Turma
+                        </h4>
+                        <a href="turmas.php">
+                          Acessar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="box ">
+                      <div class="img-box">
+                        <img src="images/addlivros.png" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Livro
+                        </h4>
+                        <a href="livros.php">
+                          Acessar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div class="box ">
+                      <div class="img-box">
+                        <img src="images/addemp.png" alt="">
+                      </div>
+                      <div class="detail-box">
+                        <h4>
+                          Empréstimos +
+                          Devoluções
+                        </h4>
+                        <a href="emprestimosDevolucoes.php">
+                          Acessar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- end treatment section -->
+            <!-- contact section -->
 </body>
 
 </html>
