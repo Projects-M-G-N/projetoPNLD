@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Captura os dados do formulário
     $matricula = $_POST["matricula"];
     $nome = $_POST["nome"];
-    $cargo = $_POST["cargo"];
     $senha = $_POST["senha"];
 
     // Verifica se a matrícula já está cadastrada
@@ -17,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Matrícula já cadastrada.";
     } else {
         // Insere os dados do novo administrador no banco de dados
-        $sql_inserir = "INSERT INTO administrador (matricula, nome, cargo, senha) VALUES ('$matricula','$nome', '$cargo', '$senha')";
+        $sql_inserir = "INSERT INTO administrador (matricula, nome, senha) VALUES ('$matricula','$nome', '$senha')";
         if ($conn->query($sql_inserir) === TRUE) {
             // Armazena o nome do administrador em uma variável de sessão
             $_SESSION['nome'] = $nome;
@@ -153,15 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="form-group">
             <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-            <!-- Campo de seleção para Cargo -->
-            <div class="form-group">
-              <select class="form-control" name="cargo" required>
-                <option value="">Selecione o cargo</option>
-                <option value="1">Cargo 1</option>
-                <option value="2">Cargo 2</option>
-                <option value="3">Cargo 3</option>
-              </select>
-            </div>
+            
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Senha" name="senha">
             </div>

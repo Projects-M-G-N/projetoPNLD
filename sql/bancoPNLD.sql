@@ -32,7 +32,6 @@ CREATE TABLE aluno (
 CREATE TABLE administrador (
    matricula BIGINT UNIQUE PRIMARY KEY,
    nome VARCHAR(50),
-   cargo VARCHAR(50) NOT NULL,
    senha VARCHAR(20) NOT NULL
 );
 
@@ -81,6 +80,6 @@ CREATE TABLE devolucao (
     FOREIGN KEY (codigo_emprestimo) REFERENCES emprestimo (codigo_emprestimo)
 );
 
-INSERT INTO administrador VALUES ("1234567890", "Ronaldo", "Diretor", "1234567890");
+INSERT INTO administrador VALUES ("1234567890", "Ronaldo", "1234567890");
 
 select * from administrador;
