@@ -80,10 +80,6 @@
                     <a class="nav-link" href="funcoes.php">HOME <span class="sr-only">(current)</span></a>
                   </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="add_livro.php">ADICIONAR LIVRO</a>
-                  </li>
-
                 </ul>
               </div>
             </div>
@@ -91,6 +87,10 @@
         </div>
       </div>
     </header>
+
+    <section class="pdf">
+      <button onclick="window.location.href='pdf_historico.php'">PDF do Histórico de Emprestimos</button>
+    </section>
     
 </body>
 </html>

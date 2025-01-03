@@ -88,10 +88,9 @@ session_start();
                   <li class="nav-item active">
                     <a class="nav-link" href="funcoes.php">HOME<span class="sr-only">(current)</span></a>
                   </li>
-
-                  <li class="nav-item">
-
-                  <li class="nav-item">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="historico.php">HISTÓRICO DE EMPRESTIMOS<span class="sr-only">(current)</span></a>
+                  </li>
 
 
 
