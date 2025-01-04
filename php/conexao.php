@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "usbw";
 $dbname = "SistemaHBL";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
