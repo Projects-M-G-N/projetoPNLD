@@ -12,7 +12,10 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Alunos Disponíveis</title>
+  <title>Alunos Disponíveis</title> 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />

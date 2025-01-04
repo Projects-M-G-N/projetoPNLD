@@ -16,7 +16,10 @@ session_start();
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Sistema HBL Control - Controle de Livros Didáticos</title>
+  <title>Sistema HBL Control - Controle de Livros Didáticos</title> 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
 
 
   <!-- bootstrap core css -->

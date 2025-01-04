@@ -36,7 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Adicionar Emprestimo de Livro</title>
+  <title>Adicionar Emprestimo de Livro</title> 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
 
 
   <!-- bootstrap core css -->

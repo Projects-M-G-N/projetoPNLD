@@ -41,7 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="author" content="" />
 
   <title>Adicionar Livro</title>
-
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />

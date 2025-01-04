@@ -49,7 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Autenticar Administrador</title>
+  <title>Autenticar Administrador</title> 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
